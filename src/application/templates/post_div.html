@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Posts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/src/application/static/styles/style.css"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <script src="https://kit.fontawesome.com/999ca2bb93.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+
+<body>
+<div class="navbar">
+    <nav>
+        <ul>
+            {% if user.is_authenticated %}
+                <li><a href="/home">Home</a></li>
+                <li><a href="/logout">Logout</a></li>
+            {% else %}
+                <li><a href="/login">Sign In</a></li>
+                <li><a href="/sign-up">Sign Up</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
+
+
+<!--
+{% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %} {% if category ==
+    'error' %}
+{% else %}
+
+{% endif %} {% endfor %} {% endif %} {% endwith %}
+-->
+
+
+<div class="container">
+    <h1>Programming forum</h1>
+    <section id="posts" class="post-section">
+        {% for post in posts %}
+            <div class="card-component">
+                <div class="card-header">
+                    <a class="author" href="/posts/{{ post.user.username }}">{{ post.user.username }}</a>
+
+                    <div class="likes">
+                        <span id="likes-count-{{ post.id }}">{{ post.likes|length }}</span>
+                        {% if user.id in post.likes|map(attribute="author")|list %}
+                            <i class="fas fa-thumbs-up"
+                               id="like-button-{{ post.id }}"
+                               onclick="like({{ post.id }})">
+                            </i>
+                        {% else %}
+                            <i class="fas fa-thumbs-up"
+                               id="like-button-{{ post.id }}"
+                               onclick="like({{ post.id }})">
+                            </i>
+                        {% endif %}
+
+                        {% if user.id == post.author %}
+                            <a class="delete-button" href="/delete-post/{{ post.id }}">X</a>
+                        {% endif %}
+                    </div>
+
+                </div>
+
+
+                <div class="main-content">
+                    <p>{{ post.text }}</p>
+                    <div class="comment" id="comments-{{ post.id }}">
+
+                        {% for comment in post.comments %}
+                            <div class="specific-comment">
+                                <a class="author"
+                                   href="/posts/{{ comment.user.username }}">{{ comment.user.username }}</a>
+                                <p class="question">{{ comment.text }}</p>
+                                <a class="date"> {{ comment.date_created }}</a>
+                                {% if user.id == comment.author or user.id == post.author %}
+                                    <a href="/delete-comment/{{ comment.id }}" class="close-button">Delete</a>
+                                {% endif %}
+                            </div>
+                        {% endfor %}
+                    </div>
+
+
+                    <div class="post-comment">
+                        <a href="#comments-{{ post.id }}" role="button"></a>
+
+                        <form class="form-class" method="POST" action="/create-comment/{{ post.id }}">
+
+                            <input
+                                    type="text"
+                                    id="text"
+                                    name="text"
+                                    class="form-control"
+                                    placeholder="Comment something!"
+                            />
+
+                            <button type="submit">Comment</button>
+
+                        </form>
+
+
+                    </div>
+                </div>
+
+                <div class="post-section-footer">
+                    <p>{{ post.date_created }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+
+    <div align="center">
+        <a href="/create-post">
+            <button type="button" class="create-post-button">Create a Post</button>
+        </a>
+    </div>
+
+</div>
+
+
+</body>
+</html>

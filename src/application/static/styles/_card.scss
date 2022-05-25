@@ -1,0 +1,233 @@
+.post-section {
+  height: auto;
+  width: 100%;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  //background-color: #fff;
+}
+
+.card-component {
+
+  form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  border-radius: 5px;
+  width: 100%;
+  max-width: 65rem;
+  padding: 2rem;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+  height: 30rem;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 7px 7px 3px 1px rgba(0, 0, 0, 0.2);
+  position: relative;
+  flex-direction: column;
+  display: flex;
+}
+
+.card-header {
+
+  height: 10%;
+  //background-color: yellow;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+
+  .author {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2rem;
+    transition: 0.2s;
+
+    &:hover {
+      color: #277FFE;
+      transition: 0.2s;
+    }
+
+  }
+}
+
+.main-content {
+
+  height: 80%;
+  background-color: #fff;
+
+  h3 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: black;
+  }
+
+  .comment {
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    height: auto;
+    min-height: 5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+  }
+}
+
+.comment {
+  font-size: 1.1rem;
+}
+
+.post-comment {
+  display: flex;
+  flex-direction: row;
+
+  input {
+    width: 70%;
+    height: 2rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 0.5rem;
+
+    &:focus {
+      outline: none;
+      border: 1px solid #ccc;
+    }
+
+  }
+
+  button {
+
+    width: 10rem;
+    border-radius: 5px;
+    background-color: #277FFE;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.2s;
+    cursor: pointer;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+
+    &:hover {
+      background-color: #2196F3;
+      transition: 0.2s;
+    }
+  }
+}
+
+
+.post-section-footer {
+  height: 10%;
+
+}
+
+.delete-button {
+  content: none;
+  border-radius: 50%;
+  padding: 0.5rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  background-color: red;
+  color: white;
+  text-decoration: none;
+}
+
+
+.specific-comment {
+  display: flex;
+  flex-direction: row;
+  //align-items: center;
+  justify-content: flex-start;
+  align-items: center;
+  height: 2.5rem;
+
+  p {
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    color: black;
+  }
+
+  .author {
+    color: #277FFE;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+
+  }
+
+  .close-button {
+    content: none;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ff3131;
+      transition: 0.2s;
+    }
+
+  }
+}
+
+.create-post-button {
+
+  width: 13rem;
+  height: 3rem;
+  margin: 2.3rem;
+  margin-top: 0;
+  border-radius: 5px;
+  background-color: #277FFE;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.2s;
+  cursor: pointer;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+
+  &:hover {
+    background-color: #1c6cf0;
+    transition: 0.2s;
+  }
+
+}
+
+
+// create a media query in 1250px
+@media screen and (max-width: 1200px) {
+
+  .card-component {
+    width: 90%;
+    margin: 0;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+}
+
+
+
+
+

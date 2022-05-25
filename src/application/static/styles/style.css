@@ -1,0 +1,479 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.create-post-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 80%;
+}
+
+.create-post-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 60rem;
+  height: 30rem;
+  background-color: white;
+  box-shadow: 7px 7px 3px 1px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.create-post-wrapper .header {
+  margin: 2rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.create-post-wrapper .header h1 {
+  font-size: 2rem;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+.create-post-wrapper .header p {
+  font-size: 1.2rem;
+  color: gray;
+  text-decoration: none;
+}
+.create-post-wrapper .main-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+}
+.create-post-wrapper .main-content .form-create-post {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.create-post-wrapper .main-content .form-create-post textarea {
+  width: 80%;
+  outline: none;
+  height: 5rem;
+  padding: 1rem;
+  min-width: 10rem;
+  resize: none;
+}
+.create-post-button-new {
+  width: 12rem;
+  height: 2.2rem;
+  margin: 2.3rem;
+  border-radius: 5px;
+  background-color: #277FFE;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.2s;
+  cursor: pointer;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+.create-post-button-new:hover {
+  background-color: #1c6cf0;
+  transition: 0.2s;
+}
+
+@media (max-width: 1200px) {
+  .create-post-section {
+    width: 90%;
+  }
+
+  .create-post-wrapper {
+    width: 100%;
+    min-width: 0;
+  }
+}
+.post-section {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-component {
+  border-radius: 5px;
+  width: 100%;
+  max-width: 65rem;
+  padding: 2rem;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+  height: 30rem;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 7px 7px 3px 1px rgba(0, 0, 0, 0.2);
+  position: relative;
+  flex-direction: column;
+  display: flex;
+}
+.card-component form {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.card-header {
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+.card-header .author {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 2rem;
+  transition: 0.2s;
+}
+.card-header .author:hover {
+  color: #277FFE;
+  transition: 0.2s;
+}
+
+.main-content {
+  height: 80%;
+  background-color: #fff;
+}
+.main-content h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.main-content p {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: black;
+}
+.main-content .comment {
+  font-size: 1.1rem;
+  border: 1px solid #ccc;
+  height: auto;
+  min-height: 5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.comment {
+  font-size: 1.1rem;
+}
+
+.post-comment {
+  display: flex;
+  flex-direction: row;
+}
+.post-comment input {
+  width: 70%;
+  height: 2rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 0.5rem;
+}
+.post-comment input:focus {
+  outline: none;
+  border: 1px solid #ccc;
+}
+.post-comment button {
+  width: 10rem;
+  border-radius: 5px;
+  background-color: #277FFE;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.2s;
+  cursor: pointer;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+.post-comment button:hover {
+  background-color: #2196F3;
+  transition: 0.2s;
+}
+
+.post-section-footer {
+  height: 10%;
+}
+
+.delete-button {
+  content: none;
+  border-radius: 50%;
+  padding: 0.5rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  background-color: red;
+  color: white;
+  text-decoration: none;
+}
+
+.specific-comment {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 2.5rem;
+}
+.specific-comment p {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  color: black;
+}
+.specific-comment .author {
+  color: #277FFE;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.specific-comment .close-button {
+  content: none;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+  border-radius: 10px;
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+.specific-comment .close-button:hover {
+  background-color: #ff3131;
+  transition: 0.2s;
+}
+
+.create-post-button {
+  width: 13rem;
+  height: 3rem;
+  margin: 2.3rem;
+  margin-top: 0;
+  border-radius: 5px;
+  background-color: #277FFE;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.2s;
+  cursor: pointer;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+.create-post-button:hover {
+  background-color: #1c6cf0;
+  transition: 0.2s;
+}
+
+@media screen and (max-width: 1200px) {
+  .card-component {
+    width: 90%;
+    margin: 0;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #e8ecff;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.forum-heading {
+  font-size: 3rem;
+  color: #277FFE;
+}
+
+.login-section {
+  margin-top: 5rem;
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  height: 30rem;
+  width: 40rem;
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.register-container {
+  height: 45rem;
+  width: 40rem;
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.navbar {
+  background-color: white;
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+  box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  margin-left: 3rem;
+  display: flex;
+  background-color: white;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: auto;
+  background-color: white;
+  list-style: none;
+}
+nav ul li {
+  background-color: white;
+  text-decoration: none;
+  color: black;
+}
+nav ul a {
+  text-decoration: none;
+  color: black;
+  background-color: inherit;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+}
+
+.login-heading {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+}
+.login-heading h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: black;
+  background-color: white;
+  margin: 0.3rem;
+}
+.login-heading p {
+  background-color: white;
+  font-weight: 500;
+  color: gray;
+}
+
+.input-container {
+  margin-top: 2rem;
+  width: 70%;
+  background-color: inherit;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 5rem;
+  margin-bottom: 2rem;
+}
+.input-wrapper label {
+  font-size: 1rem;
+  margin: 0.3rem;
+}
+.input-wrapper input {
+  width: 100%;
+  height: 1rem;
+  border-radius: 5px;
+  padding: 0.5rem;
+  outline: none;
+  border: 1px solid gray;
+  background-color: white;
+}
+.input-wrapper input:focus {
+  border: 1px solid black;
+  transition: 0.2s;
+}
+
+.input-label-wrapper {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+}
+
+.button-container {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 4rem;
+}
+
+.button-blue {
+  width: 50%;
+  height: 2.3rem;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background-color: #277FFE;
+}
+.button-blue:hover {
+  background-color: #1c6cf0;
+  transition: 0.2s;
+}
+
+.login-footer {
+  display: flex;
+  height: 5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="/src/application/static/styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <nav>
+
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/sign-up">Sign Up</a></li>
+            <li><a href="/login">Sign In</a></li>
+        </ul>
+
+    </nav>
+</div>
+
+<main>
+    <section class="register-container">
+        <form method="POST" class="login-container">
+            <div class="login-heading">
+                <h1>Create new Account!</h1>
+                <p>Enter your credentials and create new account.</p>
+            </div>
+
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <div class="input-label-wrapper">
+                        <label>Enter your Email</label>
+                        <input
+                                type="text"
+                                id="email"
+                                name="email"
+                                class="form-control"
+                                placeholder="Enter Email"/>
+                    </div>
+                </div>
+
+                <div class="input-wrapper">
+                    <div class="input-label-wrapper">
+                        <label>Enter your Username</label>
+                        <input
+                                type="text"
+                                id="username"
+                                name="username"
+                                class="form-control"
+                                placeholder="Enter Username"/>
+                    </div>
+                </div>
+
+                <div class="input-wrapper">
+                    <div class="input-label-wrapper">
+                        <label>Enter your Password</label>
+                        <input
+                                type="password"
+                                id="password1"
+                                name="password1"
+                                class="form-control"
+                                placeholder="Enter Password">
+
+                    </div>
+                </div>
+
+                <div class="input-wrapper">
+                    <div class="input-label-wrapper">
+                        <label>Confirm Password</label>
+                        <input
+                                type="password"
+                                id="password2"
+                                name="password2"
+                                class="form-control"
+                                placeholder="Enter Password Again"
+                        />
+                    </div>
+                </div>
+
+
+                <div class="input-wrapper">
+                    <button type="submit" class="button-blue">Sign In</button>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <div class="login-footer">
+        <p>Don't have an account? <a href="/sign-up">Sign Up</a></p>
+    </div>
+
+</main>
+</body>
+</html>

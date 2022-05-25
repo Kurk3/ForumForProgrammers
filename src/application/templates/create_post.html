@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <link rel="stylesheet" href="/src/application/static/styles/style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+
+<div class="navbar">
+    <nav>
+
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/logout">Logout</a></li>
+            <li><a href="/login">Sign In</a></li>
+            <li><a href="/sign-up">Sign Up</a></li>
+        </ul>
+
+    </nav>
+</div>
+
+<div class="container">
+
+    <section class="create-post-section">
+        <div class="create-post-wrapper">
+            <div class="header">
+                <h1>Create a post</h1>
+                <p>Feel free to ask questions!</p>
+            </div>
+
+            <div class="main-content">
+
+                <form method="POST" class="form-create-post">
+                    <textarea name="text" id="text" class="form-control"></textarea>
+                    <button type="submit" class="create-post-button-new">Post</button>
+                    <a href="/home">Get back on forum</a>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>

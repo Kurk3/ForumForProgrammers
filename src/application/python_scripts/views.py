@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request, flash, redirect, url_for, jsonify
 from flask_login import login_required, current_user
-from .models import Post, User, Comment, Like
-from . import db
+from src.application.python_scripts.models import Post, User, Comment, Like
+from src.application import db
 
 views = Blueprint("views", __name__)
 
@@ -78,7 +78,6 @@ def create_comment(post_id):
             db.session.commit()
         else:
             flash('Post does not exist.', category='error')
-
     return redirect(url_for('views.home'))
 
 
@@ -88,9 +87,9 @@ def delete_comment(comment_id):
     comment = Comment.query.filter_by(id=comment_id).first()
 
     if not comment:
-        flash('Comment does not exist.', category='error')
+        print('Comment does not exist.')
     elif current_user.id != comment.author and current_user.id != comment.post.author:
-        flash('You do not have permission to delete this comment.', category='error')
+        print('You do not have permission to delete this comment.')
     else:
         db.session.delete(comment)
         db.session.commit()
@@ -102,8 +101,7 @@ def delete_comment(comment_id):
 @login_required
 def like(post_id):
     post = Post.query.filter_by(id=post_id).first()
-    like = Like.query.filter_by(
-        author=current_user.id, post_id=post_id).first()
+    like = Like.query.filter_by(author=current_user.id, post_id=post_id).first()
 
     if not post:
         return jsonify({'error': 'Post does not exist.'}, 400)

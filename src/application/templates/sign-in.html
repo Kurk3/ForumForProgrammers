@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="/src/application/static/styles/style.css">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<div class="navbar">
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/sign-up">Sign Up</a></li>
+            <li><a href="/sign-in">Sign In</a></li>
+        </ul>
+    </nav>
+</div>
+
+<main>
+    <section class="login-section">
+        <div class="login-container">
+            <div class="login-heading">
+                <h1>Welcome back!</h1>
+                <p>Enter your credentials to access your account.</p>
+            </div>
+
+            <form method="POST" class="input-container">
+                <div class="input-wrapper">
+                    <div class="input-label-wrapper">
+                        <label>Enter your email</label>
+                        <input
+                                type="text"
+                                id="email"
+                                name="email"
+                                class="form-control"
+                                placeholder="Enter Email"/>
+                    </div>
+                </div>
+
+                <div class="input-wrapper">
+                    <div class="input-label-wrapper">
+                        <label>Enter your password</label>
+                        <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                class="form-control"
+                                placeholder="Enter Password"/>
+                    </div>
+                </div>
+
+                <div class="input-wrapper">
+                    <button class="button-blue" type="submit">Sign In</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="login-footer">
+            <p>Don't have an account? <a href="/sign-up">Sign Up</a></p>
+        </div>
+    </section>
+</main>
+</body>
+</html>

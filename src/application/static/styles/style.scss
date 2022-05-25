@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import 'create_post';
+@import 'login';
+@import 'card';
+
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #e8ecff;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.forum-heading {
+  font-size: 3rem;
+  color: #277FFE;
+}
+
+
+.login-section {
+  margin-top: 5rem;
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  //background-color: #fff;
+}
+
+.login-container {
+  height: 30rem;
+  width: 40rem;
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.register-container {
+  height: 45rem;
+  width: 40rem;
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+
+.navbar {
+  background-color: white;
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+  // add box shadow
+  box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  margin-left: 3rem;
+  display: flex;
+  background-color: white;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+
+
+  ul {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: auto;
+    background-color: white;
+    list-style: none;
+
+    li {
+      background-color: white;
+      text-decoration: none;
+      color: black;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      background-color: inherit;
+      letter-spacing: 0.1rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding-left: 1.4rem;
+      padding-right: 1.4rem;
+    }
+
+  }
+}
+
+.login-heading {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+    background-color: white;
+    margin: 0.3rem;
+  }
+
+  p {
+    background-color: white;
+    font-weight: 500;
+    color: gray;
+  }
+}
+
+.input-container {
+  margin-top: 2rem;
+  width: 70%;
+  background-color: inherit;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 5rem;
+  margin-bottom: 2rem;
+
+  label {
+    font-size: 1rem;
+    margin: 0.3rem;
+  }
+
+  input {
+    width: 100%;
+    height: 1rem;
+    border-radius: 5px;
+    padding: 0.5rem;
+    outline: none;
+    border: 1px solid gray;
+    background-color: white;
+
+    &:focus {
+      border: 1px solid black;
+      transition: 0.2s;
+    }
+  }
+}
+
+.input-label-wrapper {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+}
+
+.button-container {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 4rem;
+}
+
+.button-blue {
+  width: 50%;
+  height: 2.3rem;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background-color: #277FFE;
+
+  &:hover {
+    background-color: #1c6cf0;
+    transition: 0.2s;
+  }
+}
+
+.login-footer {
+  display: flex;
+  height: 5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
