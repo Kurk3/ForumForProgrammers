@@ -1,4 +1,4 @@
-# Frontend Mentor
+# Flask Blog App
 <hr>
 
 ## Goals
